@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Doppio+One&family=Inter&family=La+Belle+Aurore&display=swap");
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+}
+
+h1,
+.description {
+  font-family: Doppio One, Arial;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.books,
+.order {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  gap: 20px;
+  font-family: Doppio One, Arial;
+}
+
+.books-item,
+.order-item {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.753);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+
+  font-family: La Belle Aurore, Arial;
+}
+
+.books-item .book-info,
+.order-item .book-info {
+  display: flex;
+  gap: 10px;
+}
+
+.books-item .book-price,
+.order-item .book-price {
+  display: flex;
+  gap: 10px;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.books-item .book-price .price,
+.order-item .book-price .price {
+  font-size: 1.3em;
+}
+
+body button {
+  min-width: 150px;
+  background-color: rgb(183, 255, 75);
+  outline: none;
+  border-radius: 5px;
+  height: 50px;
+
+  font-size: 1em;
+  font-family: Doppio One, Arial;
+}
+
+span {
+  font-size: 1.2em;
+}
+
+.payment {
+  display: flex;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.popup-bg {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.42);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.window {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: auto;
+  z-index: 2;
+  padding: 5%;
+  border: 10px black solid;
+
+  display: flex;
+  gap: 20px;
+}
+
+.window h2 {
+  margin-top: 0;
+}
+
+.window > div {
+  color: black;
+  z-index: 3;
+}
+
+.window .close-popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+img {
+  max-width: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  .books-item .book-info,
+  .order-item .book-info {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 730px) {
+    .books-item .book-price {
+      flex-direction: column;
+      align-items: baseline;
+    }
+    .books-item .book-price p {
+        margin: 0;
+    }
+  }
